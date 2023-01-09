@@ -153,11 +153,9 @@ ul li a:hover {
 </script>
     <input type="range" min="10" max="60" value="20" class="slider" id="size-slider">
 
-
-<p class="text" id="size-text">
-<button id="size-text">Speak Up!</button>
+<button id="sizee-text">Speak!</button>
 <script>
-  const button = document.querySelector('#size-text');
+  const button = document.querySelector('#sizee-text');
   const text = document.querySelector('#size-text').textContent;
 
   button.addEventListener('click', () => {
@@ -165,6 +163,8 @@ ul li a:hover {
     window.speechSynthesis.speak(utterance);
   });
 </script>
+
+<p class="text" id="size-text">
         The morning of June 27th was clear and sunny, with the fresh warmth of a full­summer 
         day; the flowers were blossoming profusely and the grass was richly green. The people of
         the village began to gather in the square, between the post office and the bank, around ten 
