@@ -154,15 +154,6 @@ ul li a:hover {
     <input type="range" min="10" max="60" value="20" class="slider" id="size-slider">
 
 <button id="sizee-text">Speak!</button>
-<script>
-  const button = document.querySelector('#sizee-text');
-  const text = document.querySelector('#size-text').textContent;
-
-  button.addEventListener('click', () => {
-    const utterance = new SpeechSynthesisUtterance(text);
-    window.speechSynthesis.speak(utterance);
-  });
-</script>
 
 <p class="text" id="size-text">
         The morning of June 27th was clear and sunny, with the fresh warmth of a full­summer 
@@ -387,7 +378,15 @@ ul li a:hover {
         "It isn't fair, it isn't right," Mrs. Hutchinson screamed, and then they were upon her.
         </p></center>
     
-  
+  <script>
+  const button = document.querySelector('#sizee-text');
+  const text = document.querySelector('#size-text').textContent;
+
+  button.addEventListener('click', () => {
+    const utterance = new SpeechSynthesisUtterance(text);
+    window.speechSynthesis.speak(utterance);
+  });
+</script>
 
 
   <script type="text/javascript">
