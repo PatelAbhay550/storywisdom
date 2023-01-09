@@ -143,15 +143,7 @@ ul li a:hover {
     <h3>The Lottery</h3>
     <p>by <a href="#">Shirley Jackson.</a></p>
     <p>Genre: <a href="#">Suspence</a></p>
-<button id="dark-mode-toggle">Reading Mode</button>
-<script>
-  const toggleDarkMode = () => {
-    document.body.classList.toggle('dark-mode');
-  };
-
-  const button = document.getElementById('dark-mode-toggle');
-  button.addEventListener('click', toggleDarkMode);
-</script><button I'd="size-text">Speak Up! (Beta)</button>
+<button id="speak-button">Speak Up! (beta)</button>
     <input type="range" min="10" max="60" value="20" class="slider" id="size-slider">
 
 
@@ -378,7 +370,15 @@ ul li a:hover {
         Adams was in the front of the crowd of villagers, with Mrs. Graves beside him.
         "It isn't fair, it isn't right," Mrs. Hutchinson screamed, and then they were upon her.
         </p></center>
+    <script>const speakButton = document.getElementById('speak-button');
+    const textToSpeak = document.getElementById('size-text');
     
+    speakButton.addEventListener('click', function() {
+      const text = textToSpeak.textContent;
+      const utterance = new SpeechSynthesisUtterance(text);
+      window.speechSynthesis.speak(utterance);
+    });
+    </script>
   <script>
   const button = document.querySelector('#size-text');
   const text = document.querySelector('#size-text').textContent;
