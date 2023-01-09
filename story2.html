@@ -136,7 +136,49 @@ ul li a:hover {
           </ul>
         </nav>
         
-  </header></center><center>
+  </header></center><div class="progress-container">
+  <div class="progress-bar" id="myBar"></div>
+</div>
+
+<style>.progress-container {
+  position: fixed;  /* Fix the progress bar to the top of the page */
+  top: 0;  /* Align the progress bar to the top of the page */
+  left: 0;  /* Align the progress bar to the left of the page */
+  width: 100%;  /* Set the width to 100% */
+  height: 8px;  /* Set the height */
+  background: #ddd;  /* Set the background color */
+  border-radius: 2px;  /* Add some rounding to the edges */
+}
+
+.progress-bar {
+  height: 8px;  /* Set the height */
+  background: #6052DD;  /* Set the background color */
+  border-radius: 2px;  /* Add some rounding to the edges */
+  width: 0%;  /* Start with a width of 0% */
+}
+</style>
+<script>// Get the progress bar
+  var progressBar = document.getElementById("myBar");
+  
+  // Get the total height of the document
+  var maxScrollHeight = Math.max(
+    document.body.scrollHeight, document.documentElement.scrollHeight,
+    document.body.offsetHeight, document.documentElement.offsetHeight,
+    document.body.clientHeight, document.documentElement.clientHeight
+  );
+  
+  // Update the progress bar on scroll
+  window.onscroll = function() {
+    // Get the current scroll position
+    var scrollPosition = window.pageYOffset;
+  
+    // Calculate the percentage of the scroll position
+    var scrollPercent = (scrollPosition / maxScrollHeight) * 100;
+  
+    // Update the progress bar width
+    progressBar.style.width = scrollPercent + "%";
+  };
+  </script><center>
   
     <img src="story2.jpeg" alt="Story 2">
     <h3>Silence</h3>
