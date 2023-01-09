@@ -143,10 +143,29 @@ ul li a:hover {
     <h3>The Lottery</h3>
     <p>by <a href="#">Shirley Jackson.</a></p>
     <p>Genre: <a href="#">Suspence</a></p>
+  <button id="dark-mode-toggle">Reading Mode</button>
+
+<script>
+  const toggleDarkMode = () => {
+    document.body.classList.toggle('dark-mode');
+  };
+
+  const button = document.getElementById('dark-mode-toggle');
+  button.addEventListener('click', toggleDarkMode);
+</script>
 <button id="speak-button">Speak Up! (beta)</button>
     <input type="range" min="10" max="60" value="20" class="slider" id="size-slider">
 
-
+  <script type="text/javascript">
+    // JavaScript
+    const slider = document.getElementById('size-slider');
+    const text = document.getElementById('size-text');
+    
+    slider.addEventListener('input', function() {
+      text.style.fontSize = this.value + 'px';
+    });
+    
+    </script>
 
 <p class="text" id="size-text">
         The morning of June 27th was clear and sunny, with the fresh warmth of a full­summer 
@@ -390,16 +409,7 @@ ul li a:hover {
 </script>
 
 
-  <script type="text/javascript">
-    // JavaScript
-    const slider = document.getElementById('size-slider');
-    const text = document.getElementById('size-text');
-    
-    slider.addEventListener('input', function() {
-      text.style.fontSize = this.value + 'px';
-    });
-    
-    </script>
+
 
   <footer>
     <p>Copyright ©️ 2023 Story Wisdom</p>
