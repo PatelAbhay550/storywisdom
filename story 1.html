@@ -140,18 +140,22 @@ ul li a:hover {
       </header><div class="progress-container">
   <div class="progress-bar" id="myBar"></div>
 </div>
+
 <style>.progress-container {
-  width: 100%;
-  height: 8px;
-  background: #ddd;
-  border-radius: 2px;
+  position: fixed;  /* Fix the progress bar to the top of the page */
+  top: 0;  /* Align the progress bar to the top of the page */
+  left: 0;  /* Align the progress bar to the left of the page */
+  width: 100%;  /* Set the width to 100% */
+  height: 8px;  /* Set the height */
+  background: #ddd;  /* Set the background color */
+  border-radius: 2px;  /* Add some rounding to the edges */
 }
 
 .progress-bar {
-  height: 8px;
-  background: #4caf50;
-  border-radius: 2px;
-  width: 0%;
+  height: 8px;  /* Set the height */
+  background: #4caf50;  /* Set the background color */
+  border-radius: 2px;  /* Add some rounding to the edges */
+  width: 0%;  /* Start with a width of 0% */
 }
 </style>
 <script>// Get the progress bar
@@ -175,8 +179,7 @@ ul li a:hover {
     // Update the progress bar width
     progressBar.style.width = scrollPercent + "%";
   };
-  </script><center>
-  
+  </script>
     <img src="story1.jpg" alt="Story 1">
     <h3>The Lottery</h3>
     <p>by <a href="#">Shirley Jackson.</a></p>
