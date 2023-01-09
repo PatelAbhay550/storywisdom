@@ -155,6 +155,16 @@ ul li a:hover {
 
 
 <p class="text" id="size-text">
+<button id="size-text">Speak Up!</button>
+<script>
+  const button = document.querySelector('#size-text');
+  const text = document.querySelector('#size-text').textContent;
+
+  button.addEventListener('click', () => {
+    const utterance = new SpeechSynthesisUtterance(text);
+    window.speechSynthesis.speak(utterance);
+  });
+</script>
         The morning of June 27th was clear and sunny, with the fresh warmth of a full­summer 
         day; the flowers were blossoming profusely and the grass was richly green. The people of
         the village began to gather in the square, between the post office and the bank, around ten 
