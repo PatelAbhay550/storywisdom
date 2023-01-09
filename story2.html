@@ -144,7 +144,14 @@ ul li a:hover {
     <input type="range" min="10" max="60" value="20" class="slider" id="size-slider">
 <button id="dark-mode-toggle">Reading Mode</button>
 
+<script>
+  const toggleDarkMode = () => {
+    document.body.classList.toggle('dark-mode');
+  };
 
+  const button = document.getElementById('dark-mode-toggle');
+  button.addEventListener('click', toggleDarkMode);
+</script>
 <p class="text" id="size-text">
     There is a peace at sunrise that surpasses all understanding. It's a renewal. A feeling that anything is possible. I’d like to say I drag myself from the comfort of my bed every day to enjoy sunrise’s splendor, but you wouldn’t believe me and I would be lying. What is true is I was there that day and so was she. 
 
